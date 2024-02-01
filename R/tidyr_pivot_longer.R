@@ -139,7 +139,7 @@ sdf_pivot_longer <- function(data,
                              values_transform = NULL) {
   sc <- spark_connection(data)
   if (spark_version(sc) < "2.0.0") {
-    rlang::abort("`pivot_wider.tbl_spark` requires Spark 2.0.0 or higher")
+    rlang::abort("`pivot_longer.tbl_spark` requires Spark 2.0.0 or higher")
   }
 
   group_vars <- dplyr::group_vars(data)
